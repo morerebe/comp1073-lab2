@@ -9,26 +9,29 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <h1>Airports</h1>
     <h2>Code &ensp; Airport</h2>
-    <ul>
-      <li>
-        Beijing Capital International, https://goo.gl/maps/iPe5fAqzq8C2 PEK
-      </li>
-      <li>
-        John F Kennedy International, https://goo.gl/maps/JWwABmA3MBS2 JFK
-      </li>
-      <li>
-        Lester B. Pearson International, https://goo.gl/maps/Ypu1dJLsnQu YYZ
-      </li>
-      <li>London Heathrow, https://goo.gl/maps/TFx8SrATdYr LHR</li>
-      <li>Tokyo Haneda International, https://goo.gl/maps/5UxH2TxbRtT2 HND</li>
-    </ul>
+    <table>
+      <tr>
+        <td>
+          Beijing Capital International, https://goo.gl/maps/iPe5fAqzq8C2 PEK
+        </td>
+        <td>
+          John F Kennedy International, https://goo.gl/maps/JWwABmA3MBS2 JFK
+        </td>
+        <td>
+          Lester B. Pearson International, https://goo.gl/maps/Ypu1dJLsnQu YYZ
+        </td>
+        <td>London Heathrow, https://goo.gl/maps/TFx8SrATdYr LHR</td>
+        <td>
+          Tokyo Haneda International, https://goo.gl/maps/5UxH2TxbRtT2 HND
+        </td>
+      </tr>
+    </table>
   </body>
   <script>
-    var airportList = document.querySelector("body ul");
+    var airportList = document.querySelector("body table");
     airportList.innerHTML = "";
     var airports = [
       "Beijing Capital International, https://goo.gl/maps/iPe5fAqzq8C2 PEK",
@@ -54,11 +57,11 @@
       //grab the URL
       let airportUrl = input.slice(commaIndex + 1, -3).trim();
 
-      //create an ancor link
-      let hyperlink = `<a href ="${airportUrl}">${airportCode}  ${airportName}</a>`;
+      //create an anchor link
+      let hyperlink = `<a href ="${airportUrl}">${airportCode} ${airportName}</a>`;
 
       var result = hyperlink;
-      var listItem = document.createElement("li");
+      var listItem = document.createElement("tr");
       listItem.innerHTML = result;
       airportList.appendChild(listItem);
     }
