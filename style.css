@@ -1,0 +1,31 @@
+body {
+  margin: 20px;
+  font-family: "PT Sans", sans-serif;
+  width: 20%;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  padding: 30px;
+  font-size: 22px;
+}
+
+ul {
+  font-size: 18px;
+  list-style: none;
+  line-height: 3;
+}
+
+li {
+  border-bottom: 1px solid grey;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  color: blue;
+}
